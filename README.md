@@ -1,11 +1,11 @@
-# learningSpark
+# SparkStudy
 开发环境：
    
-   系统：Win10
+   系统：MacOS Catalina 10.15.3
     
-    开发工具：IntelliJ IDEA 2017.1.6 x64
+    开发工具：IntelliJ IDEA 2019.1.3 x64
     
-    项目管理工具：Apache Maven 3.5.0
+    项目管理工具：Apache Maven 3.5.1
     
     JDK 1.8
     
@@ -15,10 +15,12 @@
     
     HBase 1.1.5
     
-Spark单机环境安装(cdh) https://blog.csdn.net/qq_35885488/article/details/103162749
+Spark单机环境安装(cdh) https://blog.csdn.net/qq_36933797/article/details/104809314
 
-spark在Idea中设置日志打印级别https://blog.csdn.net/qq_35885488/article/details/103201704
+Spark在Idea中设置日志打印级别 https://blog.csdn.net/qq_36933797/article/details/104814385
 
+
+## 未修改
 Spark Streaming处理Socket流简单实例 https://blog.csdn.net/qq_35885488/article/details/102667468
 
 Spark Streaming处理文件(本地文件以及hdfs上面的文件) https://blog.csdn.net/qq_35885488/article/details/102681368

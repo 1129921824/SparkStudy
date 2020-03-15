@@ -3,7 +3,10 @@ package cn.sunyuqiang.spark
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
-object Map {
+/*
+  map算子
+ */
+object Spark01_Map {
   def main(args: Array[String]): Unit = {
     val config = new SparkConf().setMaster("local[*]").setAppName("Map").set("spark.testing.memory","2147480000")
     //创建spark上下文对象
@@ -12,12 +15,12 @@ object Map {
     //map操作在Executor,其他的操作在driver，executor如果要用到driver中的数据需要支持序列化
     val listRdd: RDD[Int] = sc.makeRDD(1 to 10)
     val mapRDD: RDD[Int] = listRdd.map(x => x*2)
+    mapRDD.collect().foreach(println)
 
     /*拼接*/
     val data = Array(1, 2, 3, 4, 5)
-
     sc.makeRDD(data).map(_+"test").collect().foreach(println)
-    mapRDD.collect().foreach(println)
+
 
   }
 

@@ -12,19 +12,19 @@ object Spark_RDD {
     //创建rdd，从内存中创建makeRDD,底层就是parallelize
     val listRDD: RDD[Int] = sc.makeRDD(List(1,2,5,4))
     listRDD.collect().foreach(println)
+    //将内存创建RDD数据保存到文件,8核，四个数据放八个分区
+    //listRDD.saveAsTextFile("output")
+
     //从内存中创建parallelize
     val arrayRDD: RDD[Int] = sc.parallelize(Array(1,2,3,4))
-
     arrayRDD.collect().foreach(println)
 
 
-    //从外部存储创建,默认项目路径，也可以改为hdfs路径hdfs://hadoop102:9000/xxx
+    //从外部存储创建,默认项目路径，也可以改为hdfs路径hdfs:///文件名
     //读取文件时，传递的参数为最小分区数，但是不一定是这个分区，取决于hadoop分片规则
-    val fileRDD: RDD[String] = sc.textFile("in",2)
+    val fileRDD: RDD[String] = sc.textFile("in/word.txt",2)
     fileRDD.foreach(println)
 
-    //将内存创建RDD数据保存到文件,8核，四个数据放八个分区
-   // listRDD.saveAsTextFile("output")
     fileRDD.saveAsTextFile("output")
   }
 

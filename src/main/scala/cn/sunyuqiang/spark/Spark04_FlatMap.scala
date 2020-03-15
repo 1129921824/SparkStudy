@@ -4,7 +4,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 
-object FlatMap {
+object Spark04_FlatMap {
   def main(args: Array[String]): Unit = {
     val config = new SparkConf().setMaster("local[*]").setAppName("FlatMap").set("spark.testing.memory","2147480000")
     //创建spark上下文对象

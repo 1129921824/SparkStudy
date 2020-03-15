@@ -3,7 +3,7 @@ package cn.sunyuqiang.spark
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
-object MapPartitionWithIndex {
+object Spark03_MapPartitionWithIndex {
   def main(args: Array[String]): Unit = {
     val config = new SparkConf().setMaster("local[*]").setAppName("MapPartitionWithIndex").set("spark.testing.memory","2147480000")
     //创建spark上下文对象
